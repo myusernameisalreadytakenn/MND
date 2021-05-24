@@ -240,6 +240,7 @@ def main(m, n):
     beta_i = [round(i, 3) for i in beta_i]
 
     t = [abs(i) / s_beta_s for i in beta_i]
+    neznachemi=beta_i
     if n == 14:
         beta_i = b_i
     f_3 = f_1 * f_2
@@ -317,8 +318,8 @@ def main(m, n):
         range(60, 120): [4, 3.2, 2.8, 2.5, 2.4, 2.3, 2.1, 1.9, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8],
         range(120, 2 ** 100): [3.8, 3, 2.6, 2.4, 2.2, 2.1, 2, 2, 1.9, 1.9, 1.9, 1.8, 1.8]
     }
-    if f_p > get_value(f_t, f_3)[f_4]:
-        n = 8 if n == 4 else 14
+
+    if 2 == len(neznachemi) :
         print(
             f"fp = {f_p} > ft = {get_value(f_t, f_3)[f_4]}.\n"
             f"The mathematical model is not adequate to the experimental data\n"
